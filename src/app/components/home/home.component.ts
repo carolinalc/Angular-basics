@@ -19,6 +19,6 @@ export class HomeComponent {
   }
 
   sayHello(): void {
-    console.log(`Hello ${this.name} ${this.lastName}`);    
+    console.log(`Hello ${this.name} ${this.lastName}`);
   }
 }

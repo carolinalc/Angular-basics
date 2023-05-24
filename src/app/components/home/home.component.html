@@ -1,6 +1,14 @@
 <h1>Home Page</h1>
-<p>Hi {{ name }} {{ lastName }}</p>
+<p *ngIf="name.length">Hi {{ name }} {{ lastName }}</p>
 
 <input type="text" [placeholder]="message" [(ngModel)]="name">
 <input type="text" placeholder="write your last name" [(ngModel)]="lastName">
 <button [disabled]="isDisabled" (click)="sayHello()">Submit</button>
+
+<div *ngIf="isPepe()">
+
+  <p [ngStyle]="{'color': 'black', 'font-size.px': secretMessageFontSize, 'background-color': secretMessageBackgroundColor}">This is a secret message</p>
+
+</div>
+
+<app-shopping-list></app-shopping-list>
